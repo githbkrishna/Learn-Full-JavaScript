@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type conversion</title>
+</head>
+
+<body>
+    explicite
+    <script>
+        result = '3'+ 2
+        result = '3'+ 'hello'
+        result = '3'+ true
+        result = '3'+ undefined
+        result = '3'+ null
+
+        // console.log(result);
+        // console.log(typeof result);
+        
+        result = '3'- 2
+        result = '3'- 'hello'
+        result = '3'- true
+        result = '3'- false
+        result = '3'- null
+
+        // explicite conversion
+
+        result = '3'
+        result = null
+        result = 20.001
+        // result = '3' + 'hello'
+
+        // result = Number(result)
+        // result = String(result)
+        // result = parseInt(result)
+        result = parseFloat(result)
+
+        console.log(result);
+        console.log(typeof result);
+    </script>
+</body>
+</html>
