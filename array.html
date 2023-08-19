@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <!-- name = 'cena'
+    let name = ['john', 'cena', 'undertaker', 'the rock']
+
+    console.log(name);
+    console.log(name[1]);
+    console.log(name[3]);
+
+    console.log(name.length);
+
+    let name = ['john', 2, true, null]
+    console.log(name);
+
+    let name = ['john', 2, true, null]
+
+    name.push('cena')   //to puch values at the end of the array
+    name.unshift('cena')   //to puch values in front of the array
+    name.splice(1,0)
+    name.splice(1,1)
+    name.splice(1,2)
+    name.splice(1,0, 'cena')
+    name.splice(1,1, 'cena')
+
+    console.log(name);
+
+    let num = [10, 2, 12, 13]
+    for (let i = 0; i < num.length; i++) {
+    for (let i = 0; i < num.length; i++) {
+        // console.log(num);
+        console.log(num[i]); 
+    }
+    
+    num.forEach((val,index,array) => {           //value
+        console.log(val+" " +index+" "+array);
+    });
+    
+    num.forEach(val => {
+        console.log(val);
+    });
+    
+    let a= num.forEach((val, ind) => {
+        console.log(val);
+        console.log(ind);
+        return val
+    });
+    console.log(a);
+    
+    best alternative of forEach is map
+
+
+
+-->
+    <script> 
+        let num = [10, 2, 12, 13]
+        
+        let a= num.map((val, ind) => {
+            return val+10
+        });
+        console.log(num);
+        console.log(a);
+
+
+    </script>
+</body>
+</html>
