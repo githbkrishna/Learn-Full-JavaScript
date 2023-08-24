@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>satic</title>
+</head>
+<body>
+    <!-- 
+        
+    // class Animal {
+    //     constructor(name){
+    //         this.name= name 
+    //     }
+    //     speak(){
+    //         console.log(`${this.name} makes a noise`);
+    //     }
+    //     static sing(){
+    //         console.log(`${this.name} sings tunuk tunuk`);
+    //     }
+    // }
+
+    // let d= new Animal('jugura')
+    
+    // d.speak()
+    // // d.sing()
+    // Animal.sing()
+
+
+    class Animal {
+        constructor(name){
+            this.name= name 
+        }
+        speak(){
+            console.log(`${this.name} makes a noise`);
+        }
+        static sing(name){
+            console.log(`${name} sings tunuk tunuk`);
+        }
+    }
+
+    // let d= new Animal('jugura')
+    // d.speak()
+    // Animal.sing(d.name)
+
+    // let d= new Animal('jugura')
+    // Animal.sing(d.name)
+
+    let d= 'jugura';
+    Animal.sing(d) 
+
+    -->
+    <script>
+        class Game{
+            static score = 0;
+
+            constructor(){
+                this.isPlaying = false;
+            }
+            start(){
+                this.isPlaying = true;
+                console.log('This game has started');                
+            }
+            end(){
+                this.isPlaying = false;
+                console.log('This game has ended');
+                Game.updateScore()
+            }
+
+            static updateScore(){
+                Game.score++;
+                console.log(`Score : ${Game.score}`);
+            }
+        }
+
+        const game  = new Game()
+        game.start()
+        game.end()
+        game.end()
+        game.end()
+        game.end()
+        game.end()
+
+    </script>
+</body>
+</html>

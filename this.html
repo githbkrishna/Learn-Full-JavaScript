@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this </title>
+</head>
+<body>
+    <script>
+
+    // var obj ={
+    //     fname: 'jay',
+    //     age: 22,
+    //     fun: function(){
+    //         // console.log(fname);    //this will get an error so we have to use this command see here
+    //         // console.log(this.fname);
+    //         console.log(obj.fname);
+    //         console.log(obj.age);
+    //     }
+    // }
+    // obj.fun()
+
+    function fun(){
+        console.log('hello');
+        console.log(this);
+    }
+    // fun()  // what is the object for fun obviously window
+    window.fun()
+
+
+
+    </script>
+</body>
+</html>

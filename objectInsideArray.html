@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object inside array</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            {user:1, name:"jay"},
+            {user:2, name:"viru"},
+            {user:3, name:"raj"}
+        ]
+        // console.log(arr);
+        // console.log(arr[0]);
+
+        // for in 
+        // for (let i in arr) {
+        //     console.log(arr[i]);
+        //     // console.log(arr);
+        // }
+
+        // for of 
+        // for (let i of arr) {
+        //     console.log(i);
+        //     console.log(i.name);
+        // }
+
+        // let [item1, item2] = arr
+        // console.log(item1);
+        // console.log(item2);
+
+        // let [{name}, item2] = arr
+        // console.log(name);
+        // console.log(item2);
+
+        // if you want name from item3 also ==
+
+        // let [{name}, item2, {name}] = arr
+        // console.log(name);
+        // console.log(item2);
+        // console.log(item3);
+        
+        // let [{name}, item2, {name:name1}] = arr
+        // console.log(name);
+        // console.log(item2);
+        // console.log(name1);        
+        
+        let [{name}, , {name:name1}] = arr  // if you do not want 2nd item
+        console.log(name);
+        // console.log(item2);
+        console.log(name1);        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch Api</title>
+</head>
+
+<body>
+    <script>
+
+        // //    fetch('fetchMyApi.txt').then(response=>{
+        // //    fetch('fetchMyApi.tttttttttttttttt').then(response=>{   // woking with text files
+        //    fetch('https://jsonplaceholder.typicode').then(response=>{    // fake json placeholder (post data)
+        //     if (!response.ok) {
+        //         throw new Error('NetWork is not responding')
+        //     }
+        //     // return response.text()
+        //     return response.json()
+        //    })
+        //    .then(data => console.log(data))
+        //    .catch(error =>{
+        //     console.log('error');
+        //     console.log(error);
+        //     console.error(error);
+        //    })
+
+        // fake json placeholder data
+        // if i want to print only titles of the document
+        fetch('https://jsonplaceholder.typicode')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('NetWork is not responding')
+            }
+            return response.json()
+        })
+        .then(data => data.forEach(element => {
+            // console.log(element)
+            console.log(element.title)
+        }))
+        .catch(error => {
+                console.log('error');
+                console.log(error);
+                console.error(error);
+        })
+
+        // Go to json placeholder fake data guide then (creating a resource) copy the snippet and paste here
+
+
+
+    </script>
+</body>
+
+</html>

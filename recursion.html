@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recursion</title>
+</head>
+<body>
+    <!-- means function calling itself -->
+    <script>
+        // for(let i=1;i<=10;i++){
+        //     console.log(i);
+        // }
+
+        // function printNumbersRecursion(n){
+        //     printNumbersRecursion(n)
+        // }
+        // printNumbersRecursion(1)
+
+        // when use recursion then yoy have to set a stop mode that 
+        // when our function running will stop other wise your system get hangged
+        // to avoid thi we give condition that when our code will stop executing
+
+        // function printNumbersRecursion(n){
+        //     if(n<=10){
+        //         console.log(n)
+        //         printNumbersRecursion(n+1)
+        //     }
+        // }
+        // printNumbersRecursion(1)
+
+        // facorial 
+        // 5 = 5*4*3*2*1 = 120
+        // 4 = 4*3*2*1 = 24
+
+        function fact(n){
+            // debugger
+            if (n==0){
+                return 1
+            }
+            // else{
+            //     return n*fact(n-1)
+            // }
+            return n
+        }
+        // console.log(fact(5))
+        // console.log(5*fact(5-1)*fact(4-1)*fact(3-1)*fact(2-1));
+
+        // n*fact(n-1) = 5*fact(5-1)*fact(4-1)*fact(3-1)*fact(2-1)*fact(1-1)
+
+    </script>
+</body>
+</html>

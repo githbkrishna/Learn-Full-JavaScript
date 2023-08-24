@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lexical scope</title>
+</head>
+<body>
+    <script>
+        // function fun(){
+        //     var a=1       //a is in the lexical scope of fun 1
+        //     console.log('function : ' + a);      // a is inside the fun 1
+        //     function fun2(){
+        //         console.log('i am function : ' + a);     // but a is printed also in the fun 2 because a is in the lexical scope of fun 1
+        //     }
+        //     fun2()
+        // }
+        // fun()
+
+        // function fun(){
+        //     var a=1       //a in the lexical scope of fun 1
+        //     console.log('function : ' + a);      // a is inside the fun 1
+        //     function fun2(){
+        //         var a=2       // a is inside the fun 2 and a is in the lexical scope of fun 2
+        //         console.log('i am function : ' + a);     // but a is printed also in the fun 2 because a is in the lexical scope of fun 1
+        //     }
+        //     fun2()
+        // }
+        // fun()
+
+        // function fun(){
+        //     // var a=1   //now we comment it first to see what is happning in console
+        //     console.log('function : ' + a);
+        //     function fun2(){
+        //         // var a=2
+        //             console.log('i am function : ' + a);
+        //         }
+        //         fun2()
+        //     }
+        // fun()         // now it will give error becase a is not in there lexical scope
+
+        // a = 1 // now is global value
+        // function fun(){
+        //     // var a=1
+        //     console.log('function : ' + a);
+        //     function fun2(){
+        //         // var a=2
+        //             console.log('i am function : ' + a);
+        //         }
+        //         fun2()
+        //     }
+        // fun()
+        
+        function fun(){
+            // var a=1   // there i no value in fun 1, value is in fun 2 so it will give error because
+            console.log('function : ' + a);
+            function fun2(){
+                var a=2   // fun 1 search value in its lexical scope & fun 1 but not search in fun 2
+                    console.log('i am function : ' + a);
+                }
+                fun2()
+            }
+        fun() 
+            
+    </script>
+</body>
+</html>

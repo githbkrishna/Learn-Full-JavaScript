@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>property flags & description</title>
+</head>
+<body>
+    <script>
+        let emp={}
+        emp.name = 'jay'
+
+        // console.log(Object.getOwnPropertyDescriptor(emp,'name'));
+
+        // Object.defineProperty(emp,'age',{
+        //     value: 21,
+        //     configurable: true,
+        //     writable: true,
+        //     enumerable: true
+        // })
+
+        // console.log(emp);
+        // console.log(Object.getOwnPropertyDescriptor(emp,'age'));
+
+
+        // writable 
+        // Object.defineProperty(emp,'age',{
+        //     value: 21,
+        //     configurable: true,
+        //     writable: false,
+        //     enumerable: true
+        // })
+        // emp.age=22
+        // console.log(Object.getOwnPropertyDescriptor(emp,'age'));
+
+        // configurable 
+        // Object.defineProperty(emp,'age',{
+        //     value: 21,
+        //     configurable: false,
+        //     writable: true,
+        //     enumerable: true
+        // })
+        // delete emp.age
+        // console.log(Object.getOwnPropertyDescriptor(emp,'age'));
+
+
+        // enumerable
+        Object.defineProperty(emp,'age',{
+            value: 21,
+            configurable: true,
+            writable: true,
+            enumerable: false
+        })
+        for (let k in  emp) {
+            console.log(k);
+        }
+        console.log(Object.getOwnPropertyDescriptor(emp,'age'));
+
+
+    </script>
+</body>
+</html>

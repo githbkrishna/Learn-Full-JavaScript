@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multidimentional Array</title>
+</head>
+<body>
+    <script>
+        //array
+        
+        let arr=[
+            ['John', 45],
+            ['Rock', 44],
+            ['Undertaker', 69]
+        ]
+
+        // console.log(arr);
+        // console.log(arr[2]);
+        // console.log(arr[2][0]); //print 1 & 2 index element of array 3
+        // console.log(arr[2][1]);  //if i want to print 69
+        // console.log(arr[1][1]);  //if i want to print 44
+
+        // for(let i=0; i<arr.length;i++){
+        //     console.log(arr);
+        // }
+
+        // 1st way 
+
+        // for(let i=0; i<arr.length;i++){
+        //     for (let j = 0; j < arr[i].length; j++) {                
+        //         console.log(arr[i][j]);
+        //     }
+        // }
+
+        // 2nd way 
+
+        // arr.forEach(data => {
+        //     data.forEach(val=>{
+        //         console.log(val);
+        //     })
+        // });
+
+        // 3rd way
+        
+        for (let ar of arr) {
+            for(i of ar){
+                console.log(i);
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

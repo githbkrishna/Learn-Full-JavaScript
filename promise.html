@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    
+    <h3>now go and understand how you can use call back hell easily at <link rel="stylesheet" href="Promise.CallBackHell.html"></h3>
+
+    <script>
+        function fun(task) {
+            return new Promise((resolve, reject)=>{
+                if (task) {
+                    resolve("Completed")
+                }else{
+                    reject("Not Completed")
+                }
+            })
+        }
+
+        let onResolve = (res)=>{
+            console.log(res);
+        }
+
+        let onReject = (err)=>{
+            console.log(err);
+        }
+        // fun(true).then(onResolve).catch(onReject)
+        fun(false).then(onResolve).catch(onReject)
+
+
+        // now go and understand how you can use call back hell easily
+        // at Promise.CallBackHell.html
+
+    </script>
+</body>
+</html>

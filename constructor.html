@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    <!-- 
+
+    constructor function technically are regular function, there are 2 convention though
+    
+    they are named with capital letter 
+    
+    they should be executed only with "new" operator 
+
+    -->
+
+    <script>
+
+        // function User(name){
+        //     this.name= name
+        // }
+        
+        // console.log(new User('jay'));
+        
+        // let person = new User('jay')
+        // console.log(person.name);
+        
+        // let person = User('jay')
+        // console.log(person.name);  // now we will get error without new
+        
+        function User(name){
+            if(!new.target){
+                return new User(name)
+            }
+            this.name= name
+        }
+
+        let person = User('jay')
+        console.log(person.name);
+
+
+    </script>
+</body>
+</html>

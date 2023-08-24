@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try Catch & Throw</title>
+</head>
+<body>
+    <script>
+        // function d(a,b) {
+        //     return a/b;
+        // }
+        // console.log(d(10,0));
+
+        function d(a,b) {
+            try {
+                if (b==0) {
+                    throw new Error ('cant divide by 0')
+                } else {
+                    console.log(a/b);                    
+                }
+            } catch (err) {
+                console.log(err.message);
+            }
+        }
+        d(10,0)
+
+
+
+    </script>
+</body>
+</html>

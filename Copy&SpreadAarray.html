@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy & Spread</title>
+</head>
+<body>
+    <script>
+        // array
+
+        // arr1 = ['john', 202, true]
+        // arr2 = arr1
+
+        // arr1.push('cena')
+
+        //console.log(arr1);
+        // console.log(arr2);
+
+        // arr1 = ['john', 202, true]
+        // arr2 = ['john', 202, true]
+
+        // arr2.push('cena')
+
+        // console.log(arr1);
+        // console.log(arr2);
+
+        // 2nd way
+
+        // let arr1 = ['john', 202, true]
+        // let arr2 = arr1.slice(0)
+        // let arr2 = arr1.slice(0).concat(['item', 0])
+
+        // arr2.push('cena')
+
+        // console.log(arr1);
+        // console.log(arr2);
+
+        // 3rd way   => spread operator
+        let arr1 = ['john', 202, true]
+        let arr2 = [...arr1]
+
+        arr2.push('cena')
+
+        console.log(arr1);
+        console.log(arr2);
+    </script>
+</body>
+</html>

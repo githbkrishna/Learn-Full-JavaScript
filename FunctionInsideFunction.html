@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function inside Function</title>
+</head>
+<body>
+    <script>
+        // function fun(){
+        //     console.log('i am function 1');
+        // }
+        // fun()
+
+        function fun(){
+            console.log('i am function 1');
+            function fun2(){
+                console.log('i am function 2');
+            }
+            fun2()
+        }
+        fun()
+        // fun2()   // we cann't call fun to here we have to call it inside the function
+        
+
+    </script>
+</body>
+</html>

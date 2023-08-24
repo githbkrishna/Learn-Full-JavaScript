@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sets</title>
+</head>
+<body>
+    <script>
+
+        // const arr = [12, 23, 34, 45, 56,67, 78, 89, 90]
+        // // console.log(arr);
+
+        // const s = new Set([10, 20, 30, 40, 50])  // Set not set
+        // console.log(s);
+
+        const arr = [12, 23, 34, 45, 56,67, 78, 89, 90, 90]
+        // console.log(arr);
+        // console.log(arr.length);
+        
+        const s = new Set([10, 20, 30, 40, 50, 50])  // Set has only unique values
+        // console.log(s);
+        s.add(60)
+        s.add('jay')
+        console.log(s);
+        console.log(s.length);  // it wiil not show length so we will find it in other way
+
+        length=0
+        for(let element of s){
+            length++
+        }
+        console.log(length);
+
+    </script>
+</body>
+</html>

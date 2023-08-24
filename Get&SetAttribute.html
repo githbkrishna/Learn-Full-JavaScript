@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get & set attribute</title>
+  </head>
+  <body>
+
+    <div class="hero" about="hello"></div>
+    
+    <script>
+      let hero = document.querySelector(".hero");
+    //   console.log(hero.getAttribute("about"));
+
+      hero.setAttribute("example", 123);
+    //   console.log(hero.outerHTML);
+
+    for(let att of hero.attributes){
+        // console.log(att);
+        // console.log(att.name);
+        // console.log(att.value);
+
+        console.log(`${att.name} = ${att.value}`);
+    }
+
+    </script>
+  </body>
+</html>

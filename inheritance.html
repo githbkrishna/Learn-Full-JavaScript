@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance</title>
+</head>
+<body>
+    <script>
+        // class Animal {
+        //     constructor(name){
+        //         this.name= name 
+        //     }
+        //     speak(){
+        //         console.log(`${this.name} makes a noise`);
+        //     }
+        // }
+
+        // class Dog {
+        //     constructor(name){
+        //         this.name= name 
+        //     }
+        //     speak(){
+        //         console.log(`${this.name} makes a noise`);
+        //     }
+        // }
+
+        // let d= new Dog('raja')
+        // let a= new Animal('rani')
+        // d.speak()
+        // a.speak()
+
+        // now we make Animal parent & dog child then call the dog parameters by Animal
+        class Animal {
+            constructor(name){
+                this.name= name 
+            }
+            speak(){
+                console.log(`${this.name} makes a noise`);
+            }
+            sing(){
+                console.log(`${this.name} sings tunuk tunuk`);
+            }
+        }
+
+        class Dog extends Animal {
+            constructor(name){
+                super(name) 
+            }
+        }
+        
+        class Cat extends Dog {
+            constructor(name){
+                super(name) 
+            }
+        }
+
+        let d= new Dog('raja')
+        let c= new Cat('billi')
+        
+        // d.speak()
+        // c.speak()
+
+        d.sing()
+        c.sing()
+
+    </script>
+</body>
+</html>     

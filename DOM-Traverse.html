@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traverse the DOM </title>
+</head>
+<body>
+
+    <!-- 
+        DOM
+        selectors in DOM
+        DOM traversal
+        parent & children
+        Siblings
+        append child
+        replace Child
+        Parent Node
+        more siblings
+        first & last child
+        inner & outer HTML
+        insert adjecent HTML
+        styling
+        get & set attribute
+        animaion
+        onClick{
+            mouse-over and mouse-out
+            mouse-down & mouse-up
+        }
+        add event listener
+        window location
+        pop-ups
+        bubbling
+        event delegation
+        dimension
+        p1-keylogger small project
+        p2-work with forms
+        p3-todo project
+     -->
+
+    <div> Top famous characters
+        <ul>fjfhjfhffg<!-- you can see this in childrenNodes[nodeNumber] -->
+            <li >Jay</li>class="hero" removed for excution of previousSibling
+            <li class="hero">Viru</li>
+            <li>Basanti</li>
+            <li id="villan">Gabbar</li>
+            <li>Kaliya</li>
+        </ul>
+        <img src="DOM-img.png" alt="favicon" width="300rem">
+    </div>
+
+    <script src="Inner&OuterHTML.js"></script>
+     
+    <script>
+        
+        // parentElement
+        // var parent = document.querySelector('li')
+        // var parent = document.querySelector('div')
+        // var p = parent.parentElement
+        // console.log(p);
+
+        // children
+        // var child = document.querySelector('ul')
+        // var p = child.children
+        // console.log(p);
+        
+        // childrenNodes[nodeNumber]
+        // var child = document.querySelector('ul') 
+        // console.log(child.children);
+        // console.log(child.childNodes);
+        // console.log(child.children[0]);
+        // console.log(child.childNodes[0]);
+        
+        // previousElementSiblings
+        // 1st way 
+        // console.log(document.querySelector('.hero').previousElementSibling);
+        // console.log(document.querySelector('#villan').previousElementSibling);
+        // console.log(document.querySelector('#villan').previousElementSibling.previousElementSibling);
+        // 2nd way 
+        // var a = document.querySelector('.hero')
+        // if (a.previousElementSibling == null) {
+        //     console.log("Siblings not present");
+        // }else{
+        //     console.log(a.previousElementSibling);
+        // }
+        // 3rd way 
+        // // var a = document.querySelectorAll('.hero')
+        // a.forEach((element)=> console.log(element.previousElementSibling))
+
+        // appendchild
+        // const ul = document.querySelector('ul')
+        // const newE = document.createElement('li')
+        // newE.textContent = "Blockbuster Sambha"
+        // ul.appendChild(newE)
+
+        // remove
+        // const ul = document.querySelector('ul')
+        // const ul = document.querySelector('li')
+        // const ul = document.querySelector('.hero')
+        // ul.remove()
+
+        // replaceChild
+        // const list = document.querySelector('ul')
+        // const childToChange = list.children[4];
+        // const newLi = document.createElement('li')
+        // newLi.textContent= "Blochbuster Sambha"
+        // list.replaceChild(newLi, childToChange)
+
+        // ParentNode
+        // type 1
+        // var parent = document.querySelector('ul')
+        // var parent = document.querySelector('div')
+        // var parent = document.querySelector('html')
+        // var p = parent.parentElement
+        // console.log(p);
+        // console.log("...........");
+        
+        // type 2
+        // var parent = document.querySelector('div')
+        // var parent = document.querySelector('html')
+        // var q = parent.parentNode
+        // console.log(q);
+
+        // previousSiblings
+        // var a = document.querySelector('.hero')
+        // console.log(a.previousElementSibling);
+
+        // var b = document.querySelector('.hero')
+        // console.log(b.previousSibling);
+
+        // nextSiblings
+        // var b = document.querySelector('.hero')
+        // console.log(b.nextSibling);
+        // console.log(b.nextElementSibling);
+
+        // firstChild
+        // var fChild = document.querySelector("ul")
+        // console.log(fChild.firstChild);
+
+        // var fChild = document.querySelector("ul")
+        // console.log(fChild.firstElementChild);
+
+        // lastChild
+        // var lChild = document.querySelector("ul")
+        // console.log(lChild.lastChild);
+
+        // var lChild = document.querySelector("ul")
+        // console.log(lChild.lastElementChild);
+
+    </script>
+</body>
+</html>

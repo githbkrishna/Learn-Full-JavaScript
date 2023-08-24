@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback hell</title>
+</head>
+<body>
+    
+    <!-- 
+        
+        1st
+
+    function loadingData(){
+        console.log('1) Loading Data ...');
+    }
+
+    function collectingData(){
+        console.log('2) Collecting Data ...');
+    }
+
+    function approvingData(){
+        console.log('3) Approving Data..');
+    }
+    
+    function approved(){
+        console.log('4) Approved.');
+    }
+    
+    
+    loadingData()
+    collectingData()
+    approvingData()
+    approved()
+    
+    approved()
+    loadingData()
+    approvingData()
+    collectingData() 
+
+
+
+
+    2nd
+
+    function loadingData(){
+        setTimeout(()=>{
+            console.log('1) Loading Data ...');
+        },3000)
+    }
+
+    function collectingData(){
+        setTimeout(()=>{
+            console.log('2) Collecting Data ...');                
+        },2000)
+    }
+
+    function approvingData(){
+        console.log('3) Approving Data..');                
+    }
+    
+    function approved(){
+        console.log('4) Approved.');                
+    }
+     
+    loadingData()
+    collectingData()
+    approvingData()
+    approved()
+
+    
+    
+    
+    3rd
+
+    function loadingData(callback){
+        setTimeout(()=>{
+            console.log('1) Loading Data ...');
+            callback()
+        },2000)
+    }
+
+    function collectingData(callBack){
+        setTimeout(()=>{
+            console.log('2) Collecting Data ...');                
+            callBack()
+        },3000)
+    }
+
+    function approvingData(){
+        console.log('3) Approving Data..');                
+    }
+    
+    function approved(){
+        console.log('4) Approved.');                
+    }
+    
+    loadingData(function(){
+        collectingData()
+        approvingData()
+        approved()
+    })
+    -->
+
+
+    <!-- callback hell (function called many times)
+         
+    loadingData(function(){
+        collectingData(function(){
+            approvingData()
+            approved()
+        })            
+    })     -->
+
+    <h3>solution for callback hell is === promise</h3>
+    <h3>now go and understand promise then go <link rel="stylesheet" href="Promise.CallBackHell.html"></h3>
+
+
+    <script>
+
+        function loadingData(callback){
+            setTimeout(()=>{
+                console.log('1) Loading Data ...');
+                callback()
+            },2000)
+        }
+
+        function collectingData(callback){
+            setTimeout(()=>{
+                console.log('2) Collecting Data ...');                
+                callback()
+            },3000)
+        }
+
+        function approvingData(callback){
+            setTimeout(()=>{
+                console.log('3) Approving Data..');                
+                callback()
+            },2000)
+        }
+        
+        function approved(){
+            console.log('4) Approved.');                
+        }
+
+
+        // callback hell (function called many times)
+         
+        // loadingData(function(){
+        //     collectingData(function(){
+        //         approvingData()
+        //         approved()
+        //     })            
+        // })
+
+
+        // callback hell (function called many times)
+
+        loadingData(function(){  // we have callbacked many times & created a callback nest 
+            collectingData(function(){   //this is callback hell
+                approvingData(function(){    
+                    approved()
+                })
+            })            
+        })
+
+    </script>
+</body>
+</html>

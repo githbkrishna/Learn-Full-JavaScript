@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+
+<body>
+    <!-- 
+        
+    // function Person(name, age) {
+    //     this.name = name
+    //     this.age = age
+    // }
+    // Person.prototype.greet = function () {
+    //     console.log(`hello ${this.name}`);
+    // }
+    // let user = new Person('jay', 23)
+    // user.greet()
+    // console.log(user);
+
+    // class Person{
+    //     constructor(name, age){
+    //         this.name = name
+    //         this.age = age
+    //     }
+    //     greet(){
+    //         console.log(`hello ${this.name}`);
+    //     }
+    // }
+
+    // let user = new Person('jay', 23)
+    // user.greet()
+    // console.log(user); 
+
+    -->
+    <script>
+        class User{
+            constructor(name){
+                this.name = name
+            }
+            sayHi(){
+                console.log("Hello " + this.name);
+            }
+        }
+        let user = new User ('jay')
+        console.log(user);
+        user.sayHi()
+        
+        let user1 = new User ('viru')
+        console.log(user1);
+        user1.sayHi()
+
+        let user2 = new User ('champa')
+        console.log(user2);
+        user2.sayHi()
+
+        // console.log(typeof user);
+        console.log(typeof User);
+        console.log(User.prototype.sayHi);
+    </script>
+</body>
+
+</html>

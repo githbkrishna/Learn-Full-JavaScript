@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new</title>
+</head>
+<body>
+    <script>
+
+    function fun(){
+        // return this  // 'this' keyword is window object
+        let fname='jay'
+        // return this.fname  // fname is not in this (this keyword is window object)
+        return this
+    }
+    // console.log(fun());    // there is fault in ( this ) so we have ( new ) to fullfill & solve its problem
+    
+    function fun(){
+        let fname='jay'
+        this.fname = fname
+    }
+    // console.log(new fun());
+
+    var obj = new fun()
+    console.log(obj);
+    console.log(obj.fname);    // now it is working totally like object
+    
+    </script>
+</body>
+</html>

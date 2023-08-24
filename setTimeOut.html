@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut</title>
+</head>
+<body>
+    <!-- 
+
+    skeleton
+    
+    setTimeout(()=>{
+        console.log();
+    }) 
+
+    -->
+    <script>
+
+        // 1st way 
+        // console.log('this');
+        // setTimeout(()=>{
+        //     console.log('Asynchronous');      // this will execute after 5000 mili-second / 5second
+        // },3000)
+        
+        // console.log('is');
+
+
+        // 2nd way
+        // setTimeout(fun, 3000)
+        // console.log('this');
+
+        // function fun() {
+        //     console.log('Asynchronous');
+        // }
+        // console.log('is');
+
+        // console.log('this');
+        
+        // setTimeout(()=>{
+        //     console.log('is');
+        // }, 2000)
+        
+        // setTimeout(fun, 3000)
+        // function fun() {
+        //     console.log('Asynchronous');
+        // }
+
+
+        console.log('this');
+        
+        setTimeout(()=>{
+            console.log('is');
+        }, 3000)
+        
+        setTimeout(fun, 0)
+        function fun() {
+            console.log('Asynchronous');
+        }
+
+
+    </script>
+</body>
+</html>

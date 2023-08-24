@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p3-todo project</title>
+    <style>
+        .done{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="write">
+        <ul class="todo-list" style="list-style-type: none;">
+            
+        </ul>    
+    </div>
+
+    <script>
+        let write = document.getElementById('write')
+        let todoList = document.getElementsByClassName('todo-list')
+        write.addEventListener("keydown",function(e){
+            if(e.key == "Enter"){
+                // console.log(this.value);
+                // todoList.innerHTML= this.value;
+                addTodo(this.value)
+                this.value=""
+            }
+        })
+        function addTodo(val){
+            let list = document.createElement("li")
+            list.innerHTML = `${val}`
+            // todoList.appendChild(list)
+            todoList.appendChild(list)
+            console.log(val);
+
+            list.addEventListener("click", function(){
+                this.classList.toggle('done')
+            })
+        }
+    </script>
+
+</body>
+</html>

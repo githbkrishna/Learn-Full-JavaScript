@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner & outer html</title>
+</head>
+<body>
+
+    <div> Top famous characters
+        <ul>
+            <li>Jay</li>
+            <li class="hero">Viru</li>
+            <li>Basanti</li>
+            <li id="villan">Gabbar</li>
+            <li>Kaliya</li>
+        </ul>
+    </div>
+
+    <script>
+
+        // inner HTML
+        // let a = document.querySelector('.hero')
+        // a.innerHTML = '<b>Blockbuster Sambha</b>'
+        // a.innerHTML = '<i>Blockbuster Sambha</i>'
+        // console.log(a);
+
+        // let a = document.querySelector('.hero')
+        // // a.innerHTML = 'Blockbuster Sambha'
+        // a.innerHTML += ' Blockbuster Sambha'
+        // console.log(a.innerHTML);
+
+        // outer HTML
+        let a = document.querySelector('.hero')
+        // a.outrHTML = 'Blockbuster Sambha'
+        a.outerHTML ='<b>Blockbuster Sambha</b>'
+        console.log(a.outerHTML);
+
+    </script>
+</body>
+</html>

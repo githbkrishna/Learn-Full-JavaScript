@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+        <script>
+            // function Person(name,age){
+            //     let person = Object.create(obj)
+            //     person.name = name
+            //     person.age = age
+            //     return person
+            // }
+
+            // var obj={
+            //     greet(){
+            //         console.log(`hello ${this.name}`);
+            //     }
+            // }
+            // let user = Person('jay',23)
+            // user.greet()
+            // console.log(user);
+
+            // console.log(Person.prototype);
+            // console.log(Person.prototype.toString);
+
+
+            // better way to use prototype   =========
+            function Person(name,age){
+                // let person = Object.create(Person.prototype)
+                // person.name = name
+                this.name = name
+                // person.age = age
+                this.age = age
+                // return person
+            }
+            Person.prototype.greet = function(){
+                    console.log(`hello ${this.name}`);
+                }
+            // let user = Person('jay',23)
+            let user = new Person('jay',23)
+            user.greet()
+            console.log(user);
+
+        </script>
+</body>
+</html>
